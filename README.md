@@ -1,4 +1,4 @@
 Clinica-c--
 ===========
 
-Clinica C++
+Proyecto Catedra, Clinica en C++

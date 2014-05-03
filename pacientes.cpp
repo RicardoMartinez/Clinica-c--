@@ -11,21 +11,22 @@ main(){
 	   char resp='s';
 	   int opcion; 
 	
-		 //Entrada
+		
+      //Esta variable se usa para saber si el usuario quiere continuar usando el sistema
+       do{ 
+        //Entrada
 		cout<<"\n ------------------- Bienvendido a nuestro programa -----------------------\n ";
 		cout<<"\n ------------------- Selecciones una Opcion del Menu ----------------------\n ";
 		cout<<"\n |-------------------------------- MENU ----------------------------------|\n";
 		cout<<"\n |------------------- 1-Ingreso de Pacientes -----------------------------|";
-		cout<<"\n |------------------- 2-Consulta de Pacientes ----------|";
-		cout<<"\n |------------------- 3------- -------------------------------------------|";
+		cout<<"\n |------------------- 2-Consulta de Pacientes ----------------------------|";
+		cout<<"\n |------------------- 3-Editar Fichero de Paciente -----------------------|";
 		cout<<"\n |------------------- 4-Salir --------------------------------------------|";
 						  
 		cout<<"\n\n Seleccione una Opcion del Menu: ";
 		cin>>opcion;
 		system("cls");
-		
-      //Esta variable se usa para saber si el usuario quiere continuar usando el sistema
-       do{ 
+		//////////////EXTRA	
        ofstream fs;
 	   fs.open("prueba.txt",ios::ate);
       
@@ -94,6 +95,7 @@ main(){
 	                          cin>>edad;
 	                          }while(edad<0); //Seguira pidiendo la edad hasta que sea mayor que cero
 	                          fs<<"\n * ------------------------------------------------------------------- *"<<endl;
+	                          cout<<"\n ---------------INFORMACION DEL PACIENTE---------------\n";
 	                          fs<<"\n N° Expediente: "<<n_exp;
 	                          fs<<"\n Nombre del paciente: "<<nombre<<" "<<apellido;
 	                          fs<<"\n Sexo del paciente: "<<sexo;
@@ -105,7 +107,7 @@ main(){
 	                          fs<<"\n Direccion Habitual: "<<direccion;
 	                          fs<<"\n Telefono: "<<telefono;
 	                          fs<<"\n Causa: "<<causa;
-	                          fs<<"\n Peso: "<<peso<<"lb ";
+	                          fs<<"\n Peso: "<<peso<<"lb";
 	                          fs<<"\n Altura: "<<altura<<"m \n";
 	                        	                          
 	                          fs<<"\n ---------------INFORMACION DE LA FAMILIA---------------\n";
@@ -134,7 +136,8 @@ main(){
     cin>>resp;//Aqui se captura el valor para saber si desea continuar usando el sistema 
     system("cls");
     }while(resp=='s' || resp=='S'); //Mientras resp sea 's' o 'S' se seguira usando el sistema correctamente
-       }
+}
+ 
        
 int consultar(){
 		char consultar[100];
@@ -145,8 +148,8 @@ int consultar(){
 	    ifstream fichero(filename); // abrir archivo para lectura
 	 
 	    // verificar la apertura del archivo
-	    if ( fichero.bad() ) {
-		cout << "Error al tratar de abrir archivo";
+	    if ( fichero.fail() ) {
+		cout << "\n Error al tratar de abrir archivo // Archivo no encontrado \n";
 		cin.get();
 		return 1;
 	    }

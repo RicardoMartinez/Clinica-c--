@@ -6,7 +6,7 @@
 #include<conio.h>
 
 using namespace std;
-void consultar();
+int consultar();
 main(){
 	   char resp='s';
 	   int opcion; 
@@ -105,8 +105,8 @@ main(){
 	                          fs<<"\n Direccion Habitual: "<<direccion;
 	                          fs<<"\n Telefono: "<<telefono;
 	                          fs<<"\n Causa: "<<causa;
-	                          fs<<"\n Peso: "<<peso;
-	                          fs<<"\n Altura: "<<altura;
+	                          fs<<"\n Peso: "<<peso<<"lb ";
+	                          fs<<"\n Altura: "<<altura<<"m \n";
 	                        	                          
 	                          fs<<"\n ---------------INFORMACION DE LA FAMILIA---------------\n";
 	                          fs<<"\n Nombre del Padre: "<<padre;
@@ -128,6 +128,7 @@ main(){
 						 }   
        }
        else if(opcion==2){
+       		consultar();
        }
     cout<<"\n\n Desea continuar con nuestro sistema hospitalario (S/N)?"<<endl;
     cin>>resp;//Aqui se captura el valor para saber si desea continuar usando el sistema 
@@ -135,6 +136,24 @@ main(){
     }while(resp=='s' || resp=='S'); //Mientras resp sea 's' o 'S' se seguira usando el sistema correctamente
        }
        
-void consultar(){
-	
+int consultar(){
+		char consultar[100];
+       	cout<<"\n Ingrese el Nombre del Archivo a consultar: ";
+       	cin>>consultar;
+	       	
+	    char *filename = consultar;
+	    ifstream fichero(filename); // abrir archivo para lectura
+	 
+	    // verificar la apertura del archivo
+	    if ( fichero.bad() ) {
+		cout << "Error al tratar de abrir archivo";
+		cin.get();
+		return 1;
+	    }
+	 
+	    // lectura de datos
+	    while ( ! fichero.eof() ) cout << (char)fichero.get();
+	    fichero.close();
+	    cout << endl << "archivo leido exitosamente" << endl;
+	    return 0;
 }

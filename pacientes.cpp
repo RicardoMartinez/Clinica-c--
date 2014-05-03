@@ -117,7 +117,7 @@ main(){
 	                          fs<<"\n Edad del paciente: "<<edad<<" años"<<"\n";
 	                          fs<<" * ------------------------------------------------------------------- *"<<endl<<endl;
 	                          fs.close(); //Cerramos el fichero
-	                          cout<<"\n --------------GUARDAR ARCHIVO-------------- \n"
+	                          cout<<"\n --------------GUARDAR ARCHIVO-------------- \n";
 	                          cout<<"\n Ingrese nombre de archivo mas .txt: ";
 	                          cin>>nuevo;
 	                          std::rename( "prueba.txt", (nuevo));
@@ -134,3 +134,7 @@ main(){
     system("cls");
     }while(resp=='s' || resp=='S'); //Mientras resp sea 's' o 'S' se seguira usando el sistema correctamente
        }
+       
+void consultar(){
+	
+}

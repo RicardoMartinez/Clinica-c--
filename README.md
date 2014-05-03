@@ -1,7 +1,9 @@
-Clinica-c++
-===========
+Clinica C++
+============================================
 
 Proyecto Catedra, Clinica en C++
+
+============================================
 
 Bajar esto como zip y ya!!!!!
 

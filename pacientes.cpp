@@ -3,9 +3,10 @@
 #include<iostream> 
 #include<cstring>
 #include<fstream> //Libreria que usamos para el manejo de ficheros
-#include<conio.h> 
+#include<conio.h>
 
 using namespace std;
+void consultar();
 main(){
 	   char resp='s';
 	   int opcion; 
@@ -116,6 +117,7 @@ main(){
 	                          fs<<"\n Edad del paciente: "<<edad<<" años"<<"\n";
 	                          fs<<" * ------------------------------------------------------------------- *"<<endl<<endl;
 	                          fs.close(); //Cerramos el fichero
+	                          cout<<"\n --------------GUARDAR ARCHIVO-------------- \n"
 	                          cout<<"\n Ingrese nombre de archivo mas .txt: ";
 	                          cin>>nuevo;
 	                          std::rename( "prueba.txt", (nuevo));
@@ -124,6 +126,8 @@ main(){
 	                          
 	                     
 						 }   
+       }
+       else if(opcion==2){
        }
     cout<<"\n\n Desea continuar con nuestro sistema hospitalario (S/N)?"<<endl;
     cin>>resp;//Aqui se captura el valor para saber si desea continuar usando el sistema 

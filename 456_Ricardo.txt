@@ -1,26 +1,29 @@
 
  * ------------------------------------------------------------------- *
 
- N° Expediente: 456
+ ---------------INFORMACION DEL PACIENTE---------------
+
+ N° Expediente: 789
  Nombre del paciente: Ricardo Martinez
- Sexo del paciente: Masculino
- Fecha de Nacimiento (dd-mm-aa): 18-02-1994
+ Sexo del paciente: Masculinp
+ Fecha de Nacimiento (dd-mm-aa): 18-02-94
  Edad: 20
- Estado Civil: Soltero
- DUI: 456398-9
+ Estado Civil: Solero
+ DUI: 4555-666
  Ocupacion: Estudiante
- Direccion Habitual: sadasdas
- Telefono: 2222-5555
- Causa: asdasdsadas
- Peso: 180
- Altura: 175
+ Direccion Habitual: sadsasa
+ Telefono: 25556-5455
+ Causa: asdas
+ Peso: 178lb
+ Altura: 1.75m 
+
  ---------------INFORMACION DE LA FAMILIA---------------
 
- Nombre del Padre: aNDRE
- Nombre de la Madre: Juana
- Responsable del Paciente: sdsasa
- Direccion del Responsable: sadas
- Telefono: 222-9699
+ Nombre del Padre: asdas
+ Nombre de la Madre: asss
+ Responsable del Paciente: saaa
+ Direccion del Responsable: sadsa
+ Telefono: 2222-2222
  Edad del paciente: 20 años
  * ------------------------------------------------------------------- *
 
